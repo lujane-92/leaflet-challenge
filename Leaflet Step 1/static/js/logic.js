@@ -1,4 +1,4 @@
-  var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson";
+  var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
 
   function chooseColour (magnitude){
     if (magnitude > 4){
@@ -10,7 +10,7 @@
     }else if (magnitude >= 1){
       return "yellow"
     }else {
-      return "GreenYellow"
+      return "Green"
     }
   }
  
@@ -41,7 +41,7 @@ d3.json(queryUrl, function(data) {
         attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
         maxZoom: 18,
         id: 'mapbox/streets-v11',
-        accessToken: "pk.eyJ1IjoiYW5uYS1qZXNzaWNhIiwiYSI6ImNrYW9pZXB1ZzAzdHIycnBtbHV4NHdtMzIifQ.R3r_K2yLxGdD8X1loiPxqA"
+        accessToken: "pk.eyJ1IjoibHVqYW5lOTIiLCJhIjoiY2thb2llZTFvMDJzMjJ3cWlvNHgwYmo1cSJ9.ASSry7Qp6PrHNQifvyRj2w"
 
     });
   
@@ -57,9 +57,9 @@ d3.json(queryUrl, function(data) {
     
     var myMap = L.map("map", {
       center: [
-        37.09, -95.71
+        30.09, -15.71
       ],
-      zoom: 3,
+      zoom: 2.5,
       layers: [streetmap, earthquakes]
     });
   
