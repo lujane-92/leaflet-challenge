@@ -1,13 +1,11 @@
   var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
 
   function chooseColour (magnitude){
-    if (magnitude > 4){
+    if (magnitude >= 4){
       return "FireBrick"
-    } else if (magnitude >= 3){
-      return "Crimson"
-    }else if (magnitude >= 2){
+    }else if (magnitude >= 3){
       return "orange"
-    }else if (magnitude >= 1){
+    }else if (magnitude >= 2){
       return "yellow"
     }else {
       return "Green"
